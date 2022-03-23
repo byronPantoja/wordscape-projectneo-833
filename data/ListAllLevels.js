@@ -1,27 +1,16 @@
-import answers from 'data/answers.json'
+import answers from 'data/answers'
 
-const addLevelID = (arr) => (
-arr.forEach((item, index)=>{
-    item.id = index+1;
-  })
-)
 
-const ListAllLevels = 
+let ListAllLevels = 
 answers.map((a) => a.url
   .split('/')
   .filter(element => {
   return element !== '' && element !== 'answers'})
   .join(' ')
+  .toUpperCase()
+
 )
 
-const res = ListAllLevels.reduce((s,a) => {
-  s.push({level: a})
-  return s
-}, [])
 
-addLevelID(res);
-
-addLevelID(answers);
-console.log(answers);
-console.log(res)
+console.log(answers)
 module.exports = ListAllLevels
