@@ -1,4 +1,6 @@
-[
+import addLevelID from 'scripts/addID'
+
+const answers = [
     {
         "url": "/answers/sunrise/rise/1/",
         "title": "Wordscapes 1 Rise 1 Answers",
@@ -66014,3 +66016,7 @@
         "url": ""
     }
 ]
+
+addLevelID(answers);
+
+module.exports = answers
