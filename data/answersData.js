@@ -113974,4 +113974,8 @@ const answersData = [
   },
 ];
 
+answersData.map((item, index) => {
+  item.id = index + 1;
+});
+
 module.exports = answersData;

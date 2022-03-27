@@ -11,8 +11,8 @@ const LevelTitles = Levels.map((a) =>
     })
 );
 
-// Categories.map((item, index) => {
-//   item.id = index + 1;
-// });
+Levels.map((item, index) => {
+  item.level.title = LevelTitles[index];
+});
 
 export default LevelTitles;

@@ -8,8 +8,6 @@ const Levels = answersData.reduce(
   []
 );
 
-Levels.map((item, index) => {
-  item.id = index + 1;
-});
+
 
 module.exports = Levels;
