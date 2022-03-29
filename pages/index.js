@@ -1,13 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Levels from 'data/Levels';
-
+import levelsData from 'data/levelsData';
+import groupBySection from 'data/groupBySection';
+import sectionsData from 'data/sectionsData';
 export default function Home() {
-  const list = Levels.map((l) => (
-    <ul key={l.id}>
-      <Link href={`/answers/${l.id}/`}>
+  const list = sectionsData.map((l) => (
+    <ul key={l[0]}>
+      <Link
+        href={`/answers/${l.section}`}
+      >
         <a>
-          <h2>{l.title}</h2>
+          <h2>{l[0]}</h2>
         </a>
       </Link>
     </ul>
@@ -27,3 +30,4 @@ export default function Home() {
     </>
   );
 }
+console.log(sectionsData);

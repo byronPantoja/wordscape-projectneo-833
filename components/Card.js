@@ -1,20 +1,24 @@
-import Levels from 'data/Levels';
+import levelsData from 'data/levelsDataData';
 
-const Card = () => {
-  const cardID = Levels.map((i) => (
-    <Card key={i.id}>
-      <h1>{i.title}</h1>
-      <p>{i.answer}</p>
-      <br />
-      <div>
-        <h3>{i.titleprev}</h3>
-        <p>{i.answerprev}</p>
-      </div>
-      <h3>{i.titlenext}</h3>
-      <p>{i.answernext}</p>
-    </Card>
+const Card = ({ card }) =>
+  card.map((item) => (
+    <Item
+      key={item.objectID}
+      item={item}
+    />
   ));
-  return <>{cardID}</>;
-};
+
+const Item = ({ item }) => (
+  <div>
+    <span>
+      <a href={item.url}>
+        {item.title}
+      </a>
+    </span>
+    <span>{item.author}</span>
+    <span>{item.num_comments}</span>
+    <span>{item.points}</span>
+  </div>
+);
 
 export default Card;
