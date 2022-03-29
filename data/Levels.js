@@ -33,7 +33,9 @@ Levels.map((item, index) => {
 });
 
 const groupBySection = Levels.groupBy(
-  (section) => Levels.section
+  (level) => {
+    return level.section;
+  }
 );
 console.log(groupBySection);
 
