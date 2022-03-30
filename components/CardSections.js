@@ -1,12 +1,6 @@
 import Link from 'next/link';
-const Card = (props) => {
-  const {
-    section,
-    tier,
-    tierLevel,
-    id,
-    answer,
-  } = props;
+const CardSections = (props) => {
+  const { tier, tierLevel, id } = props;
   return (
     <div key={id}>
       <h1>
@@ -16,4 +10,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default CardSections;

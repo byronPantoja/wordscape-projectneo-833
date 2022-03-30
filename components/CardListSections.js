@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-import Card from 'components/Card';
+import CardSections from 'components/CardSections';
 import sectionsData from 'data/sectionsData';
 
-const CardList = () => {
+const CardListSections = () => {
   const cardComponent =
     sectionsData.map((section) => (
       <ul key={section[0]}>
@@ -11,7 +11,7 @@ const CardList = () => {
           {section[0]}
         </h1>
         {section[1].map((i) => (
-          <Card
+          <CardSections
             key={i.id}
             section={i.section}
             tier={i.tier}
@@ -27,4 +27,4 @@ const CardList = () => {
   );
 };
 
-export default CardList;
+export default CardListSections;

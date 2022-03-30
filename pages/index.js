@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import levelsData from 'data/levelsData';
+import tierData from 'data/tierData';
 import sectionsData from 'data/sectionsData';
-import CardList from 'components/CardList';
+import CardListSections from 'components/CardListSections';
 export default function Home() {
   return (
     <>
@@ -15,7 +16,7 @@ export default function Home() {
           <h2 className='text-5xl font-extrabold tracking-tight text-gray-900 mb-5'>
             Wordscape833 - Answers
           </h2>
-          <CardList />
+          <CardListSections />
         </div>
       </main>
     </>
