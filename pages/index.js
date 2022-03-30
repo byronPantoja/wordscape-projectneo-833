@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import levelsData from 'data/levelsData';
-import tierData from 'data/objectToArr';
+import tierData from 'data/tierData';
 import sectionsData from 'data/sectionsData';
 import CardListSections from 'components/CardListSections';
 export default function Home() {
