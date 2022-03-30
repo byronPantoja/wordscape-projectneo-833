@@ -1,14 +1,7 @@
-import sectionsData from 'data/sectionsData';
+import groupByTier from 'data/groupByTier';
 
-const tierData = sectionsData;
-
-const tierList = tierData.map(
-  (section) => section[0]
+const tierData = Object.entries(
+  groupByTier
 );
 
-tierData.groupBy((t) => {
-  return t.tier;
-});
-
-console.log(tierData);
 module.exports = tierData;

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import CardSections from 'components/CardSections';
 import tierData from 'data/tierData';
+import sectionsData from 'data/sectionsData';
 
 const CardListSections = () => {
   const cardComponent = tierData.map(
@@ -10,7 +11,7 @@ const CardListSections = () => {
           {section[0]}
         </h1>
         {section[1].map((i) => (
-          <li key={i.title}>
+          <li key={i.id}>
             <Link href={i.url}>
               <a>
                 <CardSections
@@ -34,5 +35,6 @@ const CardListSections = () => {
     </div>
   );
 };
-
+console.log(sectionsData);
+console.log(tierData);
 export default CardListSections;
