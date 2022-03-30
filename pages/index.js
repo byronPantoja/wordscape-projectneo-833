@@ -6,13 +6,19 @@ import sectionsData from 'data/sectionsData';
 export default function Home() {
   const list = sectionsData.map((l) => (
     <ul key={l[0]}>
-      <Link
-        href={`/answers/${l.section}`}
-      >
-        <a>
-          <h2>{l[0]}</h2>
-        </a>
-      </Link>
+      <h1 className='font-bold text-xl'>
+        {l[0]}
+      </h1>
+      {l[1].map((i) => (
+        <Link
+          key={i.id}
+          href={`/answers/${i.url}`}
+        >
+          <a>
+            <h3>{i.title}</h3>
+          </a>
+        </Link>
+      ))}
     </ul>
   ));
 
@@ -30,4 +36,5 @@ export default function Home() {
     </>
   );
 }
+console.log(levelsData);
 console.log(sectionsData);
