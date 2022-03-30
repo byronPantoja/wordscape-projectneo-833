@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import levelsData from 'data/levelsData';
 import sectionsData from 'data/sectionsData';
 import CardList from 'components/CardList';
@@ -22,5 +21,3 @@ export default function Home() {
     </>
   );
 }
-console.log(levelsData);
-console.log(sectionsData);
