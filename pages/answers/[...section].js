@@ -1,6 +1,6 @@
-import sectionsData from 'data/sectionsData';
+import Card from 'components/Card';
 
-const section = () => {
+const sectionPage = () => {
   // let sectionList = sectionsData
   //   sectionList.map((a) => (
   //   <div key={indexOf}>
@@ -11,4 +11,4 @@ const section = () => {
   return <>He</>;
 };
 console.log(sectionsData);
-export default section;
+export default sectionPage;
