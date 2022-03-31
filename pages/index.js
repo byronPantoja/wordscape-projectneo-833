@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import levelsData from 'data/levelsData';
+import Link from 'next/link';
 import tierData from 'data/tierData';
 import sectionsData from 'data/sectionsData';
-import SectionTierLists from 'components/SectionTierList';
+import tierSectionData from 'data/tierSectionData';
 export default function Home() {
   return (
     <>
@@ -12,13 +12,39 @@ export default function Home() {
         </title>
       </Head>
       <main>
-        <div className='max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
-          <h2 className='text-5xl font-extrabold tracking-tight text-gray-900 mb-5'>
-            Wordscape833 - Answers
-          </h2>
-          <SectionTierLists />
-        </div>
+        <section>
+          {sectionsData.map(
+            (section, i) => (
+              <div
+                key={i}
+                className='bg-white shadow sm:rounded-lg'
+              >
+                <div className='px-4 py-5 sm:p-6'>
+                  <h3 className='text-lg leading-6 font-medium text-gray-900'>
+                    {section[0]}
+                  </h3>
+
+                  <div className='mt-3 text-sm'>
+                    <a
+                      href={`/answers/${section[0]}`}
+                      className='font-medium text-indigo-600 hover:text-indigo-500'
+                    >
+                      {' '}
+                      Go to Level
+                      Section Tiers{' '}
+                      <span aria-hidden='true'>
+                        &rarr;
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )
+          )}
+        </section>
       </main>
     </>
   );
 }
+
+console.log(tierSectionData);
