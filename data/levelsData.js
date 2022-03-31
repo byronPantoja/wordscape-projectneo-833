@@ -29,5 +29,5 @@ levelsData.map((item, index) => {
 levelsData.groupBy((level) => {
   return level.section;
 });
-
+console.log(levelsData);
 module.exports = levelsData;

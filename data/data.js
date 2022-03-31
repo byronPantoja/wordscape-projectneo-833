@@ -1,11 +1,12 @@
-import levelsData from 'data/levelsData';
-const data = levelsData.reduce(
-  (s, a) => {
-    s.push({ level: a });
-    return s;
-  },
-  []
-);
-console.log(data);
+import tierData from 'data/tierData';
+let data = tierData.reduce((s, a) => {
+  s.push({ sectiontier: a });
+  return s;
+}, []);
 
+data.map((item, index) => {
+  item.id = index + 1;
+});
+
+console.log(data);
 module.exports = data;

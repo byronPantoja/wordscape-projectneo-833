@@ -5,12 +5,14 @@ import sectionsData from 'data/sectionsData';
 import levelsData from 'data/levelsData';
 import data from 'data/data';
 
-const CardListSections = () => {
+const SectionTierLists = () => {
   const cardComponent = tierData.map(
     (section) => (
       <ul key={section[0]}>
         <h1 className='mx-auto font-extrabold text-2xl my-5 uppercase'>
-          {section[0]}
+          <Link href={i.url} as={i.url}>
+            <a>{section[0]}</a>
+          </Link>
         </h1>
         {section[1].map((i) => (
           <li key={i.id}>
@@ -41,8 +43,4 @@ const CardListSections = () => {
   );
 };
 
-console.log(levelsData);
-console.log(sectionsData);
-console.log(tierData);
-console.log(data);
-export default CardListSections;
+export default SectionTierLists;
