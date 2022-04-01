@@ -1,15 +1,13 @@
-import sectionsData from 'data/sectionsData';
+import sectionsData from "data/sectionsData";
 
 const object = {};
-tiersData = sectionsData.map(
-  (section) => {
-    if (section[0] !== undefined) {
-      return;
-    }
-    object[section[0]] = section[1];
+tiersData = sectionsData.map((section) => {
+  if (section[0] !== undefined) {
+    return;
   }
-);
+  object[section[0]] = section[1];
+});
 
-console.log('object', object);
+// console.log('object', object);
 
 module.exports = object;
