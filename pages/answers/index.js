@@ -1,5 +1,5 @@
 const answersPage = () => {
-  return <div>index</div>;
+  return <div>f</div>;
 };
 
 export default answersPage;
