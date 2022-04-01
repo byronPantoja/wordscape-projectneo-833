@@ -6,4 +6,10 @@ const groupByTier = levelsData.groupBy(
     level.section + ' ' + level.tier
 );
 
-module.exports = groupByTier;
+let tiersData = [];
+
+tiersData.push(groupByTier);
+
+console.log('Tier Group', tiersData);
+module.exports = tiersData;
+// gives you all levels by tiers and section

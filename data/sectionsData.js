@@ -1,8 +1,17 @@
-import groupBySection from 'data/groupBySection';
+import levelsData from 'data/levelsData';
+import 'core-js/actual/array/group-by';
 
-const sectionsData = Object.entries(
-  groupBySection
+const groupBySection =
+  levelsData.groupBy(
+    (level) => level.section
+  );
+
+let sectionsData = [];
+sectionsData.push(groupBySection);
+
+console.log(
+  'Sections Data',
+  sectionsData
 );
-
-console.log(sectionsData);
 module.exports = sectionsData;
+// gives you all levels in a section in one array
