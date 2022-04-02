@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import levelsData from 'data/levelsData';
-import tiersData from 'data/tiersData';
-import sectionsData from 'data/sectionsData';
+import sectionsData from 'data/utils/sectionsData';
+
 const Home = () => {
   return (
     <>
@@ -17,29 +16,31 @@ const Home = () => {
             </h3>
           </div>
         </div>
-        <section>
-          {levelsData.map((lvl) => (
+        <section className='section-title'>
+          {sectionsData.map((ws) => (
             <div
-              key={lvl.id}
+              key={ws.id}
               className='bg-white shadow sm:rounded-lg'
             >
               <div className='px-4 py-5 sm:p-6'>
                 <h3 className='text-lg leading-6 font-medium text-gray-900'>
-                  {lvl.section}
+                  {ws.section[0]}
                 </h3>
 
                 <div className='mt-3 text-sm'>
-                  <a
-                    href={`/answers/${lvl.section}`}
+                  <Link
+                    href={`/answers/${ws.section[0]}`}
                     className='font-medium text-indigo-600 hover:text-indigo-500'
                   >
-                    {' '}
-                    Go to Level Section
-                    Tiers{' '}
-                    <span aria-hidden='true'>
-                      &rarr;
-                    </span>
-                  </a>
+                    <a>
+                      {' '}
+                      Go to Level
+                      Section Tiers{' '}
+                      <span aria-hidden='true'>
+                        &rarr;
+                      </span>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

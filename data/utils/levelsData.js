@@ -1,4 +1,4 @@
-import answersData from 'data/answersData';
+import answersData from 'data/utils/answersData';
 import 'core-js/actual/array/group-by';
 
 const levelsData = answersData;
@@ -16,6 +16,7 @@ const LevelTitles = levelsData.map(
 );
 
 // adds section, tier, tierLevel to object
+//for each item add section, what section? the section === LevelTitle[index][0]
 levelsData.map((item, index) => {
   item.section = LevelTitles[index]
     ? LevelTitles[index][0]
