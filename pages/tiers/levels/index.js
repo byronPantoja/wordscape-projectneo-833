@@ -6,12 +6,6 @@ const index = () => {
   const router = useRouter();
   const secPage =
     router.asPath.split('/')[2];
-  console.log(
-    'sec',
-    tiersData.map((ws) =>
-      ws[1].map((lvl) => lvl.title)
-    )
-  );
   return (
     <>
       <main>

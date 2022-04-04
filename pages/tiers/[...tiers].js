@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import data from 'data/data';
+import tiersData from 'data/utils/tiersData';
 
-const sectionsPage = () => {
+const tiersPage = () => {
   const router = useRouter();
   const secPage =
     router.asPath.split('/')[2];
@@ -28,8 +29,7 @@ const sectionsPage = () => {
 
                     <div className='mt-3 text-sm'>
                       <Link
-                        href={`/tiers/${ws.id}/
-                          ${lvl.lvlsectier[0]}`}
+                        href={`/tiers/levels/${lvl.lvlsectier[0]}`}
                       >
                         <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                           {' '}
@@ -51,7 +51,7 @@ const sectionsPage = () => {
   );
 };
 
-export default sectionsPage;
+export default tiersPage;
 
 // const getStaticProps = ({ params }) => {
 //   const data = object[params.id];
