@@ -28,7 +28,8 @@ const sectionsPage = () => {
 
                     <div className='mt-3 text-sm'>
                       <Link
-                        href={`/answers/${lvl.id}`}
+                        href={`/tiers/${ws.id}/
+                          ${lvl.lvlsectier[0]}`}
                       >
                         <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                           {' '}

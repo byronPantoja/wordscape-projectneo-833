@@ -12,8 +12,19 @@ const Home = () => {
         <div className='bg-white shadow sm:rounded-lg'>
           <div className='px-4 py-5 sm:p-6'>
             <h3 className='text-lg leading-6 font-medium text-gray-900'>
-              Wordscape833
+              Wordscape833 Sections
             </h3>
+            <div className='mt-3 text-sm'>
+              <Link href={`/tiers`}>
+                <a className='font-medium text-indigo-600 hover:text-indigo-500'>
+                  {' '}
+                  See all Tiers
+                  <span aria-hidden='true'>
+                    &rarr;
+                  </span>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
         <section className='section-title'>
@@ -29,12 +40,11 @@ const Home = () => {
 
                 <div className='mt-3 text-sm'>
                   <Link
-                    href={`/answers/${ws.id}`}
+                    href={`/tiers/${ws.id}`}
                   >
                     <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                       {' '}
-                      Go to Level
-                      Section{' '}
+                      Go to Level Tiers{' '}
                       <span aria-hidden='true'>
                         &rarr;
                       </span>
