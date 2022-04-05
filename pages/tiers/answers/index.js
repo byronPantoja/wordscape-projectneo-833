@@ -44,7 +44,7 @@ const index = () => {
 
                   <div className='mt-3 text-sm'>
                     <Link
-                      href={`/tiers${td.url}?level=${td.id}`}
+                      href={`/tiers${lvl.url}?level=${lvl.id}`}
                     >
                       <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                         {' '}
