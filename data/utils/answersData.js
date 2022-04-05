@@ -113957,21 +113957,6 @@ const answersData = [
     urlnext: 'wordscapeshelper.comNone',
     answersnext: '',
   },
-  {
-    url: '',
-    title: '',
-    answer: '',
-    titleprev: '',
-    urlprev:
-      '/answers/sublime/sails/16/',
-    answersprev: '',
-    titlenext: '',
-    urlnext: '',
-    answersnext: '',
-  },
-  {
-    url: '',
-  },
 ];
 
 answersData.map((item, index) => {
