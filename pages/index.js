@@ -15,7 +15,7 @@ const Home = () => {
               Wordscape833 Sections
             </h3>
             <div className='mt-3 text-sm'>
-              <Link href={`/tiers`}>
+              <Link href={`/level`}>
                 <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                   {' '}
                   See all Tiers
@@ -40,7 +40,7 @@ const Home = () => {
 
                 <div className='mt-3 text-sm'>
                   <Link
-                    href={`/tiers/${ws.id}`}
+                    href={`/level/${ws.id}`}
                   >
                     <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                       {' '}

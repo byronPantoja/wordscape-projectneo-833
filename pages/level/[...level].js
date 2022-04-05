@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import data from 'data/data';
 import tiersData from 'data/utils/tiersData';
 
-const tiersPage = () => {
+const Levels = () => {
   const router = useRouter();
   const secPage =
     router.asPath.split('/')[2];
@@ -49,7 +49,7 @@ const tiersPage = () => {
                                 }
                               </h1>
                               <Link
-                                href={`/tiers${td.url}?level=${td.id}`}
+                                href={`/level${td.url}?level=${td.id}`}
                               >
                                 <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                                   {' '}
@@ -76,7 +76,7 @@ const tiersPage = () => {
   );
 };
 
-export default tiersPage;
+export default Levels;
 
 // const getStaticProps = ({ params }) => {
 //   const data = object[params.id];

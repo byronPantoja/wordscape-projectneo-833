@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import data from 'data/data';
 
-const index = () => {
+const LevelsPage = () => {
   const router = useRouter();
   const secPage =
     router.asPath.split('/')[2];
@@ -17,7 +17,7 @@ const index = () => {
             </h3>
             <div className='mt-3 text-sm'>
               <Link
-                href={`/tiers/answers`}
+                href={`/level/answers`}
               >
                 <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                   {' '}
@@ -44,7 +44,7 @@ const index = () => {
 
                   <div className='mt-3 text-sm'>
                     <Link
-                      href={`/tiers/${ws.id}`}
+                      href={`/level/${ws.id}`}
                     >
                       <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                         {' '}
@@ -66,7 +66,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default LevelsPage;
 
 // const getStaticProps = ({ params }) => {
 //   const data = object[params.id];

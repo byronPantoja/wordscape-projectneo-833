@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import tiersData from 'data/utils/tiersData';
 
-const index = () => {
+const AnswersPage = () => {
   const router = useRouter();
   const secPage =
     router.asPath.split('/')[2];
@@ -44,7 +44,7 @@ const index = () => {
 
                   <div className='mt-3 text-sm'>
                     <Link
-                      href={`/tiers${lvl.url}?level=${lvl.id}`}
+                      href={`/level${lvl.url}?level=${lvl.id}`}
                     >
                       <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                         {' '}
@@ -65,7 +65,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default AnswersPage;
 
 // const getStaticProps = ({ params }) => {
 //   const data = object[params.id];

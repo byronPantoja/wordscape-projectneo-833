@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import tiersData from 'data/utils/tiersData';
 import levelsData from 'data/utils/levelsData';
 
-const tiersPage = () => {
+const Answers = () => {
   const router = useRouter();
   const levelID = router.query;
 
@@ -68,7 +68,7 @@ const tiersPage = () => {
   );
 };
 
-export default tiersPage;
+export default Answers;
 
 // const getStaticProps = ({ params }) => {
 //   const data = object[params.id];
