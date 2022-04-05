@@ -24,7 +24,6 @@ const tiersPage = () => {
                 >
                   <div className='px-4 py-5 sm:p-6'>
                     <h3 className='text-lg leading-6 font-medium text-gray-900'>
-                      ...tiers Page
                       {lvl.lvlsectier[0].toUpperCase()}
                     </h3>
                     {tiersData
