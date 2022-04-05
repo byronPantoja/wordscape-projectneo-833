@@ -24,23 +24,49 @@ const tiersPage = () => {
                 >
                   <div className='px-4 py-5 sm:p-6'>
                     <h3 className='text-lg leading-6 font-medium text-gray-900'>
+                      ...tiers Page
                       {lvl.lvlsectier[0].toUpperCase()}
                     </h3>
-
-                    <div className='mt-3 text-sm'>
-                      <Link
-                        href={`/tiers/levels/${lvl.lvlsectier[0]}`}
-                      >
-                        <a className='font-medium text-indigo-600 hover:text-indigo-500'>
-                          {' '}
-                          Go to Level
-                          Section Tiers{' '}
-                          <span aria-hidden='true'>
-                            &rarr;
-                          </span>
-                        </a>
-                      </Link>
-                    </div>
+                    {tiersData
+                      .filter(
+                        (idFilter) =>
+                          idFilter.section ===
+                            secPage &&
+                          idFilter.id ===
+                            lvl.id
+                      )
+                      .map((t) =>
+                        t[1].map(
+                          (td) => (
+                            <div
+                              key={
+                                td.id
+                              }
+                              className='mt-3 text-sm'
+                            >
+                              <h1>
+                                {
+                                  td.title
+                                }
+                              </h1>
+                              <Link
+                                href={`/tiers${td.url}?level=${td.id}`}
+                              >
+                                <a className='font-medium text-indigo-600 hover:text-indigo-500'>
+                                  {' '}
+                                  Go to
+                                  Level
+                                  Section
+                                  Tiers{' '}
+                                  <span aria-hidden='true'>
+                                    &rarr;
+                                  </span>
+                                </a>
+                              </Link>
+                            </div>
+                          )
+                        )
+                      )}
                   </div>
                 </div>
               ))

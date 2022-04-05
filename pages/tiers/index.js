@@ -17,11 +17,11 @@ const index = () => {
             </h3>
             <div className='mt-3 text-sm'>
               <Link
-                href={`/tiers/levels`}
+                href={`/tiers/answers`}
               >
                 <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                   {' '}
-                  See all Levels
+                  See all Answers
                   <span aria-hidden='true'>
                     &rarr;
                   </span>

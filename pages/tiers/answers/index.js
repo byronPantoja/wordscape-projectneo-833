@@ -12,7 +12,7 @@ const index = () => {
         <div className='bg-white shadow sm:rounded-lg'>
           <div className='px-4 py-5 sm:p-6'>
             <h3 className='text-lg leading-6 font-medium text-gray-900'>
-              Wordscape833 Levels
+              Wordscape833 Answers Page
             </h3>
             <div className='mt-3 text-sm'>
               <Link href={`/`}>
@@ -40,15 +40,15 @@ const index = () => {
                     {lvl.tier.toUpperCase()}{' '}
                     {lvl.tierLevel.toUpperCase()}
                   </h3>
+                  <p>{lvl.answer}</p>
 
                   <div className='mt-3 text-sm'>
                     <Link
-                      href={`${lvl.url}`}
+                      href={`/tiers${td.url}?level=${td.id}`}
                     >
                       <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                         {' '}
-                        Go to Level
-                        Section Answer{' '}
+                        See more
                         <span aria-hidden='true'>
                           &rarr;
                         </span>
